@@ -1,8 +1,8 @@
 import java.util.*;
 public class Booking
 {
-/* floor no. 1,2,3... of req room, 
-   occupancy : max allowed persons in the room 1,2 ..,
+/* floor no. 1,2... of req room, 
+   occupancy : max allowed persons in the room 1,2, 3 ..,
    AC : Is AC req? True or False*/
     byte floor,occupancy;boolean AC;
     public Booking(byte floor, byte occupancy, boolean AC)
@@ -35,7 +35,7 @@ these are static so that all objects may access same value as set in main.*/
             int floor_no=((b.gen_room_id())[1]>2)?2:1;
             if (room_id!=-1)
             {
-                taken.add(room_id); // keep list of booked room to check letter
+                taken.add(room_id); // keep list of booked room to check latter
                 String ac=(AC==true)?"Yes":"No";
                 System.out.println("Wishing a very happy stay! Room number:"+room_id+" floor:"+floor_no+" AC?"+ac+" Occupancy:"+occupancy+" Estimated Cost/day :Rs"+b.price());
             }
